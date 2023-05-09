@@ -14,7 +14,7 @@ pages:
     paths:
       - node_modules/
   script:
-    - npm run build --base="/bloom-beauty/"
+    - npm run build -- --base="/bloom-beauty/"
     - cp -a dist/. public/
   artifacts:
     paths:
