@@ -1,0 +1,24 @@
+{
+  "name": "bloom-beauty",
+  "version": "1.0.0",
+  "description": "Bloom Beauty E-Commerce project",
+  "main": "main.js",
+  "scripts": {
+    "serve": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@gitlab.com/epam-ehu/bloom-beauty.git"
+  },
+  "author": "Aliaksandr Krasnou <aliaksandr_krasnou@epam.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://gitlab.com/epam-ehu/bloom-beauty/issues"
+  },
+  "homepage": "https://gitlab.com/epam-ehu/bloom-beauty#readme",
+  "devDependencies": {
+    "vite": "^4.3.5"
+  }
+}
