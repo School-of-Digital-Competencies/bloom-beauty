@@ -14,7 +14,7 @@ pages:
     paths:
       - node_modules/
   script:
-    - npm run build
+    - npm run build --base=$CI_PAGES_URL
     - cp -a dist/. public/
   artifacts:
     paths:
