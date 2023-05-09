@@ -15,6 +15,7 @@ pages:
       - node_modules/
   script:
     - npm run build
+    - cp -a dist/. public/
   artifacts:
     paths:
       - public
