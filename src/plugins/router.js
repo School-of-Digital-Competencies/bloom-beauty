@@ -1,5 +1,7 @@
 import { Router } from 'yourrouter';
-import { Home } from '../pages/Home';
+import { HomePage } from '../pages/HomePage';
+import { CatalogPage } from '../pages/CatalogPage';
+import { ProductPage } from '../pages/ProductPage';
 
 Router.createInstance({
   renderId: '#routes',
@@ -9,13 +11,15 @@ Router.createInstance({
 const router = Router.getInstance();
 
 router.addRoute('/', () => {
-  return Home;
+  return HomePage;
 });
 
-router.addRoute('/test', () => {
-  console.log('Hello test page');
-
-  return () => '<p>Test page!</p>'; // you must return a function
+router.addRoute('/catalog', () => {
+  return CatalogPage;
 });
+
+router.addRoute('/catalog/:id', () => {
+  return ProductPage;
+})
 
 export default router;

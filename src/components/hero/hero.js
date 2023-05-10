@@ -9,7 +9,7 @@ export const Hero = () => {
 
       <p class="hero__description">Great gift for yourself and loved ones</p>
 
-      <a class="hero__cta" href="#/">Shop now</a>
+      <a class="hero__cta" href="#/catalog">Shop now</a>
     </section>
     `;
 };

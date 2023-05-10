@@ -1,6 +1,6 @@
 import { Hero } from '../components/hero/hero';
 
-export const Home = () => {
+export const HomePage = () => {
   return `
     ${Hero()}
   `;
