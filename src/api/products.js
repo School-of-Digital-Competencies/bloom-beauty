@@ -26,6 +26,13 @@ const products = [
     price: 32,
     img: 'product-04.png',
   },
+
+  {
+    title: 'Per',
+    description: 'per per per',
+    price: 120,
+    img: 'product-05.png',
+  },
 ].map((product, index) => ({ ...product, id: index + 1 }));
 
 export const getProducts = (from = 0, count = 4) => {
