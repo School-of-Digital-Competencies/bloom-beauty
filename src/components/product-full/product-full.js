@@ -1,11 +1,13 @@
 import './product-full.css';
+import { getImageUrl } from '../../utils/utils';
 
 export const ProductFull = (product) => {
   const { id, title, description, img, price } = product;
+  const imgUrl = getImageUrl(img);
 
   return `
     <article class="product-full">
-        <img class="product-full__image" src="${img}" />
+        <img class="product-full__image" src="${imgUrl}" />
 
         <div class="product-full__content">
             <h3 class="product-full__title">${title}</h3>

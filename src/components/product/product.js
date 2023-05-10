@@ -1,8 +1,5 @@
 import './product.css';
-
-function getImageUrl(name) {
-  return new URL(`/src/assets/images/products/${name}`, import.meta.url).href;
-}
+import { getImageUrl } from '../../utils/utils';
 
 export const Product = (product) => {
   const { id, title, description, img, price } = product;
