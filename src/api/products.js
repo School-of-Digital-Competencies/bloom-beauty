@@ -15,8 +15,8 @@ const products = [
 
   {
     title: 'Cream',
-    description: 'lorem',
-    price: 32,
+    description: 'fdlsd lsdl sdmsl',
+    price: 51,
     img: 'product-03.png',
   },
 
