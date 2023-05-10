@@ -1,5 +1,5 @@
 import { getProducts } from '../api/products';
-import { Product } from '../components/product/Product';
+import { Product } from '../components/product/product';
 
 export const CatalogPage = () => {
   const products = getProducts();
