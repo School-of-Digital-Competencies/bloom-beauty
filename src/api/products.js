@@ -3,28 +3,28 @@ const products = [
     title: 'Dewy Cream',
     description: 'With jeju Cherry blossom',
     price: 32,
-    img: '/src/assets/images/products/product-01.png',
+    img: 'product-01.png',
   },
 
   {
     title: 'Fermented',
     description: '5-in-1',
     price: 46,
-    img: '/src/assets/images/products/product-02.png',
+    img: 'product-02.png',
   },
 
   {
     title: 'Cream',
     description: 'lorem',
     price: 32,
-    img: '/src/assets/images/products/product-03.png',
+    img: 'product-03.png',
   },
 
   {
     title: 'Fer',
     description: 'fsdg',
     price: 32,
-    img: '/src/assets/images/products/product-04.png',
+    img: 'product-04.png',
   },
 ].map((product, index) => ({ ...product, id: index + 1 }));
 

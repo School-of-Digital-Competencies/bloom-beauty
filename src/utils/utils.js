@@ -1,3 +1,3 @@
-export function getImageUrl(path) {
-  return new URL(`${path}`, import.meta.url).href;
+export function getProductImageUrl(path) {
+  return new URL(`/src/assets/images/products/${path}`, import.meta.url).href;
 }
