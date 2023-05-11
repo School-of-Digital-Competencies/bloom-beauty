@@ -20,6 +20,13 @@
 }
 .header.opened #menu {
   transform: translateX(calc(100vw - 20px - 63px));
+
+}
+.header.opened #menu .burger-menu span {
+  background: #ffffff;
+}
+.header.opened #menu .icon-title {
+  display: none;
 }
 .header .menu-list{
   display: none;
@@ -66,7 +73,7 @@
   background: #383838;
   box-sizing: border-box;
   left: 3px;
-  transition: 0.3s ease-in-out;
+  transition: 0.5s ease-in-out;
 }
 
 .burger-menu span:nth-child(1) {
@@ -79,6 +86,20 @@
 
 .burger-menu span:nth-child(3) {
   top: 17px;
+}
+
+
+.header.opened .burger-menu span:nth-child(1) {
+  transform: rotate(-45deg) translate(-7px, 7px);
+}
+
+.header.opened .burger-menu span:nth-child(2) {
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+.header.opened .burger-menu span:nth-child(3) {
+  transform: rotate(45deg) translate(-2px, -1px);
 }
 
 
