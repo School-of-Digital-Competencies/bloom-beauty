@@ -1,0 +1,60 @@
+.share {
+  /*display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+
+  min-height: 376px;
+
+  background-color: var(--color-light-pink);
+  background-image: url('../../assets/images/hero-mobile.png');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 78px 96px 78px 32px;*/
+}
+
+.share__title {
+  /*font-size: 1.125rem;
+  line-height: 1.5rem;
+
+  margin-bottom: 30px;*/
+}
+
+.share__description {
+  /*font-size: 0.875rem;
+  line-height: 1.375rem;
+
+  margin-bottom: 30px;*/
+}
+
+.share__cta {
+  /*border: none;
+  color: var(--color-white);
+  background-color: var(--color-pink);
+
+  padding: 8px 54px;
+
+  font-size: 0.875rem;
+  line-height: 1.375rem;*/
+}
+
+@media screen and (min-width: 768px) {
+  .share {
+    /*background-image: url('../../assets/images/hero-desktop.png');*/
+  }
+}
+
+.share__followButton {
+display: flex;
+flex-direction: row;
+justify-content: space-between;
+align-items: center;
+padding: 10px;
+width: 246px;
+height: 41px;
+color: #F5A3B7;
+border-radius: 4px;
+
+}
