@@ -33,6 +33,20 @@ const products = [
     price: 120,
     img: 'product-05.png',
   },
+
+  {
+    title: 'Lotus Glow Kit',
+    description: "Reveal your skin's natural glow with our Lotus Glow Kit. Nourishing body and face creams with lotus extract provide deep hydration and rejuvenation. Suitable for all skin types. Vegan, cruelty-free, eco-friendly.",
+    price: 120,
+    img: 'product-09.png',
+  },
+
+  {
+    title: 'Floral Essence Masks Sets',
+    description: 'Indulge in the beauty of nature with our Floral Essence Masks set. Each mask features a unique blend of flower extracts to hydrate and nourish your skin. Experience the essence of flowers in your skincare routine.',
+    price: 120,
+    img: 'product-10.png',
+  },
 ].map((product, index) => ({ ...product, id: index + 1 }));
 
 export const getProducts = (from = 0, count = 4) => {
