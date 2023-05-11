@@ -1,10 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
 .footer {
   background-color: var(--color-black);
   color: var(--color-white);
-
-  padding: 12px;
+  /*padding: 12px;*/
 }
 
 .footer > .logo {
   color: var(--color-white);
+}
+
+.footer__wrapper {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 40px 0 24px;
+}
+
+.footer__icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.footer__icon {
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+.footer__icon:not(:last-child) {
+  margin-right: 60px;
+}
+
+
+
+.footer__logo__wrap {
+  width: 225px;
+  color: rgba(255, 255, 255, 1);
+  font-weight: 500;
+}
+
+
+.footer__logo {
+  font-size: 1.75rem;
+  line-height: 2.625rem;
+  font-weight: 600;
+}
+
+.footer__logo span {
+  font-weight: 500;
+  color: rgba(245, 163, 183, 1);
+}
+
+.logo__discription {
+  font-size: 0.9rem;
+  font-weight: 400;
+  line-height: 1.125rem;
+}
+
+.logo__phone a, .logo__email a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 1);}
+
+
+.footer__line {
+  width: 100vw;
+  background-color: #BFB9CF;
+  height: 1px;
+}
+
+.footer__data {
+  font-family: Poppins sans-serif;
+  color: #B0A6BD;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 21px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.footer__first {
+  display: flex;
+}
+
+.footer__first p:first-child {
+  margin-right: 20px;
+}
+
+.footer__data {
+  padding: 0 12px;
 }
