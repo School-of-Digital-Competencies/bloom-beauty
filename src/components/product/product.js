@@ -1,10 +1,10 @@
 import './product.css';
-import { getProductImageUrl } from '../../utils/utils';
+import { getIconUrl, getProductImageUrl } from '../../utils/utils';
 
 export const Product = (product) => {
   const { id, title, description, img, price } = product;
   const imgUrl = getProductImageUrl(img);
-
+  
   return `
     <article class="product">
         <img class="product__image" src="${imgUrl}" />
@@ -15,6 +15,8 @@ export const Product = (product) => {
             <p class="product__description">
                 ${description}
             </p>
+
+            <img src=${iconUrl} />
       
             <p class="product__price">&#36;${price}</p>
       
