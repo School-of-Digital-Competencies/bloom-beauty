@@ -23,11 +23,11 @@ const TEMPLATE = `
 
     <nav class="mobile-hidden">
         <ul>
-            <li>SHOP ALL</li>
+            <li><a href="#/catalog">SHOP ALL</a></li>
             <li>BESTSELLERS</li>
             <li>COLLECTION</li>
             <li>ABOUT US</li>
-            <li>BLOG</li>
+            <li><a href="#/posts">BLOG</a></li>
         </ul>
     </nav>
 
@@ -57,7 +57,7 @@ const TEMPLATE = `
         </div>
         <ul class="menu-list_body">
           <li><a href="#/catalog">CATALOG</a></li>
-          <li><a href="#/blog">BLOG</a></li>
+          <li><a href="#/posts">BLOG</a></li>
           <li>SHOP ALL </li>
           <li>BESTSELLERS</li>
           <li>COLLECTION</li>
