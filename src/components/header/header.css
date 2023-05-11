@@ -88,6 +88,10 @@
   top: 17px;
 }
 
+a{
+  text-decoration: none;
+  color: #383838;
+}
 
 .header.opened .burger-menu span:nth-child(1) {
   transform: rotate(-45deg) translate(-7px, 7px);
