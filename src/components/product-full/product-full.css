@@ -7,17 +7,31 @@
 }
 
 .product-full__image {
-  max-width: 100%;
-  height: 280px;
   object-fit: contain;
+width: 495px;
+height: 495px;
 }
+.product-small_image {
+box-sizing: border-box;
+width: 83px;
+height: 83px;
+
+
+
+}
+.product-small_images {
+display: flex;
+justify-content: space-between;
+
+}
+
 
 .product-full__content {
   padding: 8px 12px;
 }
 
 .product-full__title {
-  font-size: 1rem;
+  font-size: 1.5rem;
   line-height: 1.5rem;
   font-weight: 500;
 
@@ -41,10 +55,11 @@
 }
 
 .product-full__cta {
-  border: 1px solid var(--color-black);
+  border: 1px solid var(--color-pink);
   border-radius: 4px;
   background-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-white);
+  background-color: var(--color-pink);
   padding: 10px 90px;
 }
 
