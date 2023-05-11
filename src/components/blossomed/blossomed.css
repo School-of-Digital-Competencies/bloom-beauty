@@ -1,0 +1,14 @@
+.blossomed {
+  display: flex;
+  flex-wrap: wrap;
+}
+.blossomed > div {
+  flex: 1 1 150px;
+}
+
+
+.blossomed__image {
+  max-width: 100%;
+  height: 290px;
+  object-fit: contain;
+}
