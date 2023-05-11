@@ -12,6 +12,10 @@ export function getIconUrl(icon) {
   return new URL(`/src/assets/icons/${icon}`, import.meta.url).href;
 }
 
+export function getQuizImageUrl(img) {
+  return new URL(`/src/assets/images/quiz/${img}`, import.meta.url).href;
+}
+
 export function getBlossomedImageUrl(img) {
   return new URL(`/src/assets/images/blossomed/${img}`, import.meta.url).href;
 }
