@@ -43,3 +43,7 @@ export const getPosts = (from = 0, count = 4) => {
 export const getPostById = id => {
   return posts.find(post => Number(post.id) === Number(id));
 };
+
+export const getBlogPosts = (from = 0, count = 3) => {
+  return [...posts].slice(from, count);
+};
