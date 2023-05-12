@@ -1,0 +1,76 @@
+.blog {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+  min-height: 376px;
+
+  background-color: white;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  padding: 78px 96px 78px 32px;
+}
+
+.blogs__wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.blog__wrapper {
+  max-width: 392px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.blog__img {
+  height: 220px;
+  width: 392px;
+  object-fit: contain;
+
+}
+
+.blog__button {
+  background-color: var(--color-white);
+  color: var(--color-black);
+  padding: 10px;
+  font-family: 'Poppins';
+  font-style: normal;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 21px;
+  width: 362px;
+  height: 41px;
+  border-radius: 4px;
+  border: 1px solid black;
+  gap: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  /*.blog {
+    background-image: url('../../assets/images/hero-desktop.png');
+  }*/
+}
+
+/* blog start */
+
+.blog__header {
+  font-size: 1.5rem;
+  line-height: 2.25rem;
+  font-weight: 700;
+  color: rgba(56, 56, 56, 1);
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.blog__header span {
+  font-size: 1.125rem;
+  line-height: 1.75rem;
+  font-weight: 400;
+  color: rgba(105, 117, 134, 1);
+  text-transform: capitalize;
+}
+
+/* blog end */
