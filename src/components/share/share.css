@@ -1,60 +1,82 @@
-.share {
-  /*display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: flex-start;
+@media (max-width: 768px) {
+  .share {
+    padding: 70px 20px 70px 20px;
+  }
 
-  min-height: 376px;
+  .share__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+  }
 
-  background-color: var(--color-light-pink);
-  background-image: url('../../assets/images/hero-mobile.png');
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  .share__title {
+    width: 185px;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+    text-transform: uppercase;
+  }
 
-  padding: 78px 96px 78px 32px;*/
-}
-
-.share__title {
-  /*font-size: 1.125rem;
-  line-height: 1.5rem;
-
-  margin-bottom: 30px;*/
-}
-
-.share__description {
-  /*font-size: 0.875rem;
-  line-height: 1.375rem;
-
-  margin-bottom: 30px;*/
-}
-
-.share__cta {
-  /*border: none;
-  color: var(--color-white);
-  background-color: var(--color-pink);
-
-  padding: 8px 54px;
-
-  font-size: 0.875rem;
-  line-height: 1.375rem;*/
+  .share__all {
+    display: none;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .share {
-    /*background-image: url('../../assets/images/hero-desktop.png');*/
+    padding-top: 120px;
+    padding-bottom: 180px;
+  }
+
+  .share__wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .share__title {
+    font-size: 24px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  .share__all {
+    display: block;
+    text-align: center;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 27px;
+    text-transform: capitalize;
+    color: #697586;
   }
 }
 
-.share__followButton {
-display: flex;
-flex-direction: row;
-justify-content: space-between;
-align-items: center;
-padding: 10px;
-width: 246px;
-height: 41px;
-color: #F5A3B7;
-border-radius: 4px;
+.share__title {
+  margin-top: 0;
+  margin-bottom: 0;
+}
 
+.share__hash {
+  color: #f5a3b7;
+}
+
+.share__followButton {
+  align-items: center;
+  display: flex;
+  padding: 10px;
+  color: #f5a3b7;
+  border-radius: 4px;
+  margin: 20px auto;
+  justify-content: center;
+  border-radius: 4px;
+  background-color: #f5a3b7;
+  color: white;
+  width: 240px;
+  box-sizing: border-box;
 }

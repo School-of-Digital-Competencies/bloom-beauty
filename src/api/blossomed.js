@@ -44,7 +44,7 @@ const blossomed = [
   },
 ].map((product, index) => ({ ...product, id: index + 1 }));
 
-export const getBlossomed = (from = 0, count = 4) => {
+export const getBlossomed = (from = 0, count = 6) => {
   return [...blossomed].slice(from, count);
 };
 
