@@ -27,7 +27,7 @@ const TEMPLATE = `
             <li>BESTSELLERS</li>
             <li>COLLECTION</li>
             <li>ABOUT US</li>
-            <li><a href="#/posts">BLOG</a></li>
+            <li><a href="#/blogposts">BLOG</a></li>
         </ul>
     </nav>
 
