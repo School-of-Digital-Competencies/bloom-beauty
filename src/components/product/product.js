@@ -1,7 +1,7 @@
 import './product.css';
 import { getProductImageUrl } from '../../utils/utils';
 
-export const Product = (product) => {
+export const Product = product => {
   const { id, title, description, img, price } = product;
   const imgUrl = getProductImageUrl(img);
 
