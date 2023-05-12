@@ -63,6 +63,131 @@ justify-content: space-between;
   padding: 10px 90px;
 }
 
+
+.review__section{
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-content: center;
+}
+#review-title{
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+button.small{
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 27px;
+  text-transform: capitalize;
+  color: #697586;
+}
+button#write{
+  border: 0;
+  outline: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background: #FFFFFF;
+
+  border-radius: 4px;
+}
+.rating-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#top-rating{
+  margin-top: 20px;
+}
+.stars{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 114px;
+  height: 18px;
+  margin-right: 10px;
+}
+.star{
+  width: 18px;
+  height: 18px;
+}
+.star img{
+  width: 100%;
+  height: 100%;
+}
+.review{
+  display: flex;
+  align-items: flex-start;
+  max-width: 1100px;
+  width: 100%;
+}
+.reviews{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+.review__header_logo{
+  display: flex;
+  align-items: flex-start;
+  margin-right: 16px;
+}
+.review__header_logo img{
+  width: 48px;
+  height: 48px;
+}
+.review__content{
+  display: flex;
+  flex-direction: column;
+}
+.review__divider{
+  width: 1100px;
+  height: 1px;
+  background: #DFE1E3;
+  margin: 30px 0;
+}
+.review__header{
+  height: 48px;
+}
+.review__header_desc{
+  display: flex;
+  flex-direction: column;
+}
+
+.review__header__username{
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 20px;
+  margin-bottom: 10px;
+  color: #383838;
+}
+
+.review__body{
+  display: flex;
+  flex-direction: column;
+}
+.review__title{
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 20px;
+  margin: 22px 0 12px 0;
+}
+.review__desc {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 22px;
+  color: #697586;
+  margin-bottom: 12px;
+}
+
+
 @media screen and (min-width: 768px) {
   .product-full {
     flex-direction: row;
