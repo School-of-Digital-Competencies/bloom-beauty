@@ -4,6 +4,7 @@ import { ProductCardLarge } from '../components/product-card-large';
 
 import { Quiz } from '../components/quiz/quiz';
 import { Share } from '../components/share/share';
+import {Cards} from "../components/cards/cards";
 import {Blog} from "../components/blog/blog";
 
 export const HomePage = () => {
@@ -11,6 +12,7 @@ export const HomePage = () => {
 
   return `
     ${Hero()}
+    ${Cards()}
     ${products.map(el => ProductCardLarge(el))}
     ${Blog()}
     ${Quiz()}
