@@ -2,8 +2,7 @@ import './post.css';
 import { getPostImageUrl } from '../../utils/utils';
 
 export const Post = (post, index) => {
-  console.log('post', post);
-  const { id, title, description, img, tags, createdDate } = post;
+  const {  title, description, img, tags, createdDate } = post;
   const imageURL = getPostImageUrl(img);
   const Tag = tag => {
     return `
@@ -19,8 +18,9 @@ export const Post = (post, index) => {
             <h3 class="post__title">${title}</h3>
             <p class="post__description">${description}</p>
             <ul class="post__list">${tags.map(tag => Tag(tag)).join('')}</ul>
-            <button>Read more</button>
+            <button class ='post__read-btn'>Read more</button>
         </div>
+      
     </article>
     `;
 };
