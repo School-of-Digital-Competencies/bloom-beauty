@@ -75,3 +75,37 @@
     color: #697586;
     background-color: transparent;
 }
+@media(min-width: 700px) and (max-width: 1920px){
+.product_card_img {
+width: 598px; 
+height: 500px;
+}
+.large_card{
+    flex-direction: row;
+    margin-bottom: 60px;
+    gap:8px;
+}
+.product__content{
+    display: flex;
+    flex-direction: column;
+}
+.button__container{
+display: flex;
+margin-top:30px;
+}
+.btn_shop {
+width:246px;
+height:41px;
+border-radius: 4px;
+margin-right: 30px;
+}
+.hashtags{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.large_card.post-right .product__content {
+    order: -1;
+}
+
+}
