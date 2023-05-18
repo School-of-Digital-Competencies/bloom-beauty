@@ -19,3 +19,7 @@ export function getQuizImageUrl(img) {
 export function getBlossomedImageUrl(img) {
   return new URL(`/src/assets/images/blossomed/${img}`, import.meta.url).href;
 }
+
+export function getCardImageUrl(img) {
+  return new URL(`/src/assets/images/cards/${img}`, import.meta.url).href;
+}

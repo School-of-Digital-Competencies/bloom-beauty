@@ -9,6 +9,12 @@
   flex-direction: column;
 }
 
+.cards__row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .card-item, .card-content {
   display: flex;
   flex-direction: column;
@@ -64,9 +70,6 @@
 }
 
 .card-image {
-  background-image: url('../../assets/images/cards/img-1.png');
-  background-size: cover;
-  background-repeat: no-repeat;
   width: 289px;
   height: 289px;
   margin-bottom: 30px;
@@ -113,4 +116,24 @@
 
 .card-content {
   text-align: left;
+}
+
+.cards__circles {
+  display: flex;
+  margin-bottom: 90px;
+}
+
+.card__circle {
+  width: 10px;
+  height: 10px;
+  background-color: rgba(223, 225, 227, 1);
+  border-radius: 50%;
+}
+
+.card__circle:first-child {
+  background-color: rgba(176, 166, 189, 1);
+}
+
+.card__circle:not(:last-child) {
+  margin-right: 8px;
 }
