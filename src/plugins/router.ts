@@ -4,6 +4,8 @@ import { HomePage } from '../pages/HomePage.ts';
 import { CatalogPage } from '../pages/CatalogPage';
 import { ProductPage } from '../pages/ProductPage';
 import { BlogPostsPage } from '../pages/BlogPostsPage';
+import { filterLogic } from '../components/filters/productFilterLogic'
+
 
 const router = Router.create({
   renderId: '#app',
@@ -16,6 +18,7 @@ router.addRoute('/', async () => {
 
 router.addRoute('/catalog', async () => {
   await renderInHtml(CatalogPage, 'app');
+  await filterLogic()
 });
 
 router.addRoute('/blogposts', async () => {

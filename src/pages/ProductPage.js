@@ -6,6 +6,8 @@ import { Layout } from '../layout/Layout';
 export const ProductPage = async () => {
   const { id } = router.getRouteParams();
 
+
+
   const product = await getProductById(id);
 
   if (!product) {
