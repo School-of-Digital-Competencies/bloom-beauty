@@ -1,4 +1,4 @@
-import { getPosts } from '../api/posts';
+  import { getPosts } from '../api/posts';
 import { Post } from '../components/post/post';
 import { Blog } from '../components/blog/blog';
 import { Pagination } from '../components/pagination';
