@@ -23,3 +23,11 @@ export interface ProductsResponse {
 export interface RatingStar {
   fill: string;
 }
+
+export interface Post {
+  title: string,
+  description: string,
+  img: string,
+  tags: string[],
+  createdDate: Date
+}

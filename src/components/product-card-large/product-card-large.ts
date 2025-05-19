@@ -18,7 +18,7 @@ export const ProductCardLarge = (product: Product, index: number): string => {
           </div>
           <div class="button__container">
             <button href=#/catalog class='btn_shop card__btn'>Shop now</button>
-            <a href=#/catalog/${id} class='btn_read card__btn'>Explore more</a>
+            <a href=#/catalog/${id} class='btn_read card__btn'>Explore more →</a>
           </div>
         </div>
     </section>
