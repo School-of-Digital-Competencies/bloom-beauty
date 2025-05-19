@@ -1,42 +1,41 @@
+import { getProducts } from "@/api/products";
 
-export const filterLogic = ():void => {
+export const filterLogic = async () => {
 
-const filterHeaders = document.querySelectorAll<HTMLDivElement>('.filter-header');
+  const filterHeaders = document.querySelectorAll<HTMLDivElement>('.filter-header');
+  const applyBtn = document.getElementById('apply-btn');
+  const sortSelect = document.getElementById('sort-select') as HTMLSelectElement | null;
 
-filterHeaders.forEach(header => {
-  header.addEventListener('click', () => {
-    const filterGroup = header.parentElement as HTMLElement | null;
+  filterHeaders.forEach(header => {
+    header.addEventListener('click', () => {
+      const filterGroup = header.parentElement as HTMLElement | null;
+      if (!filterGroup) return;
 
-    if (!filterGroup) return;
+      const filterContent = filterGroup.querySelector<HTMLElement>('.filter-content');
+      const arrow = header.querySelector<HTMLElement>('.arrow');
 
-    const filterContent = filterGroup.querySelector<HTMLElement>('.filter-content');
-    const arrow = header.querySelector<HTMLElement>('.arrow');
-
-    if (filterContent) {
-      filterContent.classList.toggle('active');
-    }
-
-    if (arrow) {
-      arrow.classList.toggle('active');
-    }
+      filterContent?.classList.toggle('active');
+      arrow?.classList.toggle('active');
+    });
   });
-});
 
-const activateFilterByIndex = (index: number) => {
-  const filterGroups = document.querySelectorAll<HTMLElement>('.filter-group');
-  const group = filterGroups[index];
+  applyBtn?.addEventListener('click', async () => {
+    const sortBy = sortSelect?.value || undefined;
+    getProducts({ sortBy: sortBy });
 
-  if (!group) return;
+  });
+  const activateFilterByIndex = (index: number) => {
+    const filterGroups = document.querySelectorAll<HTMLElement>('.filter-group');
+    const group = filterGroups[index];
+    if (!group) return;
 
-  const content = group.querySelector<HTMLElement>('.filter-content');
-  const arrow = group.querySelector<HTMLElement>('.arrow');
+    const content = group.querySelector<HTMLElement>('.filter-content');
+    const arrow = group.querySelector<HTMLElement>('.arrow');
 
-  content?.classList.add('active');
-  arrow?.classList.add('active');
+    content?.classList.add('active');
+    arrow?.classList.add('active');
+  };
+
+  activateFilterByIndex(2);
+  activateFilterByIndex(3);
 };
-
-activateFilterByIndex(2);
-activateFilterByIndex(3);
-
-
-}

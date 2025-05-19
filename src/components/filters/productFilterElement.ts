@@ -99,7 +99,7 @@ export const filterElement = (): string => {
             </div>
         </div>
         
-        <button class="apply-button">Apply</button>
+        <button class="apply-button" id="apply-btn">Apply</button>
     </div>
     `
 };
