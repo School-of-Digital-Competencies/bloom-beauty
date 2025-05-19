@@ -1,5 +1,5 @@
 import { getProducts } from '../api/products';
-import { ProductComponent } from '../components/product/product';
+import { ProductGrid } from '../components/product-grid/product-grid';
 import { Layout } from '../layout/Layout';
 
 export const CatalogPage = async () => {
@@ -7,7 +7,7 @@ export const CatalogPage = async () => {
 
   return Layout(`
     <section class="products">
-      ${products.map((product) => ProductComponent(product)).join('')}
+      ${ProductGrid(products)}
     </section>
   `);
 };
