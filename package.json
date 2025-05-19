@@ -4,7 +4,7 @@
   "description": "Bloom Beauty E-Commerce project",
   "main": "main.js",
   "scripts": {
-    "serve": "vite",
+    "dev": "vite",
     "build": "vite build",
     "preview": "vite preview"
   },
@@ -22,6 +22,6 @@
     "yourrouter": "^1.1.0"
   },
   "devDependencies": {
-    "vite": "^4.3.5"
+    "vite": "^5.1.4"
   }
 }
