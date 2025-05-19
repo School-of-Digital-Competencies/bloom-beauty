@@ -1,7 +1,8 @@
 import './cards.css';
 import { CardItem } from './card-item/card-item.ts';
+import { type Product } from '../../types';
 
-export const Cards = (title, data) => {
+export const Cards = (title: string, data: Product[]): string => {
   return `
     <section class="cards">
     <div class="cards__wrapper">

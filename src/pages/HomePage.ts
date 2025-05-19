@@ -1,4 +1,4 @@
-import { Hero } from '../components/hero/hero';
+import { Hero } from '../components/hero/hero.ts';
 import { Blog } from '../components/blog/blog';
 import { getProducts } from '../api/products';
 import { Layout } from '../layout/Layout';
