@@ -2,13 +2,13 @@ import { Hero } from '../components/hero/hero';
 import { Blog } from '../components/blog/blog';
 import { getProducts } from '../api/products';
 import { ProductCardLarge } from '../components/product-card-large';
-
+import { Layout } from '../layout/Layout';
 import { Quiz } from '../components/quiz/quiz';
 import { Share } from '../components/share/share';
 import { Cards } from '../components/cards/cards';
 
-export const HomePage = () => {
-  const products = getProducts(5, 7);
+export const HomePage = async () => {
+  const products = await getProducts(5, 7);
   const headings = {
     sectionOne: 'New Arrivals',
     sectionTwo: 'Best Sellers',
@@ -67,13 +67,13 @@ export const HomePage = () => {
     },
   ];
 
-  return `
+  return Layout(`
     ${Hero()}
     ${Cards(headings.sectionOne, dataSectionOne)}
     ${Cards(headings.sectionTwo, dataSectionTwo)}
-    ${products.map((el) => ProductCardLarge(el))}
+    ${products.map((el) => ProductCardLarge(el)).join('')}
     ${Blog()}
     ${Quiz()}
     ${Share()}
-  `;
+  `);
 };

@@ -68,7 +68,8 @@ const TEMPLATE: string = `
 `;
 
 export function onMenuBurgerClicked(): void {
-  const headerElement: HTMLElement | null = document.getElementsByTagName('header')[0];
+  const headerElement: HTMLElement | null =
+    document.getElementsByTagName('header')[0];
   if (headerElement) {
     headerElement.classList.toggle('opened');
   }
@@ -79,4 +80,4 @@ export const Header = (): HTMLElement => {
   headerElement.classList.add('header');
   headerElement.innerHTML = TEMPLATE;
   return headerElement;
-}; 
+};

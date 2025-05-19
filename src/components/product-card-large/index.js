@@ -5,7 +5,6 @@ export const ProductCardLarge = (product, index) => {
   const { description, title, img, id } = product;
 
   const imageUrl = getProductImageUrl(img);
-  console.log(id % 2);
   return `
     <section class="large_card ${id % 2 === 0 ? 'post-left' : 'post-right'}">
         <img class='product_card_img' src=${imageUrl}>

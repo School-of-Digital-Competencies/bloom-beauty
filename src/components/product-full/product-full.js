@@ -1,5 +1,4 @@
 import './product-full.css';
-import { getProductImageUrl } from '../../utils/utils';
 import {reviewArray} from "../../api/reviews";
 
 function getReviewHTMLs(reviews, productId) {
@@ -37,62 +36,65 @@ function getReviewHTMLs(reviews, productId) {
   return result;
 }
 
-
 export const ProductFull = (product) => {
-  const { id, title, description, img, price } = product;
-  const imgUrl = getProductImageUrl(img);
-  const smallImgUrl = imgUrl.slice(0,-4);
+  if (!product) return '<div>Product not found</div>';
+
+  const { id, title, description, images, price, rating, brand, category, stock } = product;
+  const mainImage = images[0];
+  const smallImages = images.slice(1, 6);
 
   const reviews = getReviewHTMLs(reviewArray, id);
+
   return `
     <article class="product-full">
-    <div class=product-images>
-
-        <img class="product-full__image" src="${imgUrl}" />
+      <div class="product-images">
+        <img class="product-full__image" src="${mainImage}" alt="${title}" />
         <div class="product-small_images">
+          ${smallImages.map(img => `
+            <img class="product-small_image" src="${img}" alt="${title}" />
+          `).join('')}
+        </div>
+      </div>
 
-        <img class="product-small_image"  src="${smallImgUrl}-1.png"/>
-        <img class="product-small_image"  src="${smallImgUrl}-2.png"/>
-        <img class="product-small_image"  src="${smallImgUrl}-3.png"/>
-        <img class="product-small_image"  src="${smallImgUrl}-4.png"/>
-        <img class="product-small_image"  src="${smallImgUrl}-5.png"/>
+      <div class="product-full__content">
+        <h3 class="product-full__title">${title}</h3>
+        <p class="product-full__brand">${brand}</p>
+        <p class="product-full__category">${category}</p>
+        <p class="product-full__price">$${price.toFixed(2)}</p>
+        <p class="product-full__stock">In Stock: ${stock}</p>
+        <p class="product-full__description">${description}</p>
+
+        <div class="rating-container">
+          <div class="stars">
+            ${Array(5).fill().map((_, i) => `
+              <div class="star">
+                <img src="src/assets/icons/${i < Math.floor(rating) ? 'star.png' : 'star-alt.png'}" alt="">
+              </div>
+            `).join('')}
+          </div>
+          <div class="rating-value">${rating.toFixed(1)}</div>
         </div>
 
+        <button class="product-full__cta">Add to Cart</button>
+      </div>
+    </article>
+
+    <div class="review__section">
+      <h3 id="review-title">Read the reviews</h3>
+      <button class="small">see all</button>
+      <div class="rating-container" id="top-rating">
+        <div class="stars">
+          ${Array(5).fill().map((_, i) => `
+            <div class="star">
+              <img src="src/assets/icons/${i < Math.floor(rating) ? 'star.png' : 'star-alt.png'}" alt="">
+            </div>
+          `).join('')}
+        </div>
+        <div class="count__reviews">${reviewArray.filter(r => r.productId === id).length} reviews</div>
+      </div>
+      <div class="reviews">
+        ${reviews}
+      </div>
     </div>
-
-  <div class="product-full__content">
-    <h3 class="product-full__title">${title}</h3>
-
-
-    <p class="product-full__price">&#36;${price}</p>
-    <p class="product-full__description">${description}</p>
-    <p class="product-full__size">Size: 50ml</p>
-
-
-    <button class="product-full__cta">Add to Cart</button>
-    <p class="product-full__description">A clear, water-jelly cream with Cherry Blossom and Niacinamide that delivers a burst of hydration and glow for visibly brighter, dewy skin.</p>
-
-  </div>
-</article>
-
-<div class="review__section">
-  <h3 id="review-title">Read the reviews</h3>
-  <button class="small">
-     see all
-  </button>
-  <div class="rating-container" id="top-rating">
-    <div class="stars">
-      <div class="star"><img src="src/assets/icons/star.png" alt=""></div>
-      <div class="star"><img src="src/assets/icons/star.png" alt=""></div>
-      <div class="star"><img src="src/assets/icons/star.png" alt=""></div>
-      <div class="star"><img src="src/assets/icons/star.png" alt=""></div>
-      <div class="star"><img src="src/assets/icons/star.png" alt=""></div>
-    </div>
-    <div class="count__reviews">4 review</div>
-  </div>
-  <div class="reviews">
-  ${reviews}
-  </div>
-</div>
-    `;
+  `;
 };
