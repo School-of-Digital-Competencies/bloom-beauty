@@ -1,6 +1,7 @@
 import { getProductById } from '../api/products';
 import { ProductFull } from '../components/product-full/product-full';
 import router from '../plugins/router';
+import { Layout } from '../layout/Layout';
 
 export const ProductPage = async () => {
   const { id } = router.getRouteParams();
@@ -11,7 +12,7 @@ export const ProductPage = async () => {
     return '<div>Product not found</div>';
   }
 
-  return `
+  return Layout(`
     ${ProductFull(product)}
-  `;
+  `);
 };

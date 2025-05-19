@@ -1,12 +1,13 @@
 import { getProducts } from '../api/products';
-import { Product } from '../components/product/product';
+import { ProductComponent } from '../components/product/product';
+import { Layout } from '../layout/Layout';
 
 export const CatalogPage = async () => {
   const products = await getProducts();
 
-  return `
+  return Layout(`
     <section class="products">
-      ${products.map((product) => Product(product)).join('')}
+      ${products.map((product) => ProductComponent(product)).join('')}
     </section>
-  `;
+  `);
 };

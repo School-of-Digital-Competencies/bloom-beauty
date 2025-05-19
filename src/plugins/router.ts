@@ -1,6 +1,6 @@
 import Router from 'yourrouter';
 import { renderInHtml } from '../utils/renderInHtml';
-import { HomePage } from '../pages/HomePage';
+import { HomePage } from '../pages/HomePage.ts';
 import { CatalogPage } from '../pages/CatalogPage';
 import { ProductPage } from '../pages/ProductPage';
 import { BlogPostsPage } from '../pages/BlogPostsPage';
@@ -23,7 +23,6 @@ router.addRoute('/blogposts', async () => {
 });
 
 router.addRoute('/catalog/:id', async () => {
-  console.log('ProductPage', router.getRouteParams());
   await renderInHtml(ProductPage, 'app');
 });
 

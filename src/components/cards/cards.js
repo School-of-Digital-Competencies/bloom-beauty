@@ -1,5 +1,5 @@
 import './cards.css';
-import {CardItem} from "./card-item/card-item";
+import { CardItem } from './card-item/card-item.ts';
 
 export const Cards = (title, data) => {
   return `

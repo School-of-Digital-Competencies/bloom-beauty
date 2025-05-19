@@ -1,13 +1,12 @@
+import { Product } from '../../types';
 import './product-card-large.css';
-import { getProductImageUrl } from '../../utils/utils';
 
-export const ProductCardLarge = (product, index) => {
-  const { description, title, img, id } = product;
+export const ProductCardLarge = (product: Product, index: number): string => {
+  const { description, title, thumbnail, id, images } = product;
 
-  const imageUrl = getProductImageUrl(img);
   return `
-    <section class="large_card ${id % 2 === 0 ? 'post-left' : 'post-right'}">
-        <img class='product_card_img' src=${imageUrl}>
+    <section class="large_card ${index % 2 === 0 ? 'post-left' : 'post-right'}">
+        <img class='product_card_img' src=${images[0]} alt="${title}">
         <div class="product__content"><div class='product_title'>${title}</div>
         <p class='product_description'>${description}</p>
         <div class='hashtags'>
