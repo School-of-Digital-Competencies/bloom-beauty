@@ -23,8 +23,8 @@
     "yourrouter": "^2.0.5"
   },
   "devDependencies": {
-    "vite": "^5.1.4",
+    "@types/node": "^20.0.0",
     "typescript": "^5.0.0",
-    "@types/node": "^20.0.0"
+    "vite": "^6.3.5"
   }
 }
