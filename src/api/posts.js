@@ -36,9 +36,20 @@ const posts = [
   },
 ].map((post, index) => ({ ...post, id: index + 1 }));
 
-export const getPosts = (from = 0, count = 4) => {
-  return [...posts].slice(from, count);
+const API_URL = 'https://dummyjson.com/posts';
+
+export const getPosts = async () => {
+  try {
+    const res = await fetch(`${API_URL}`);
+      const data = await res.json();
+      return data.posts
+  }
+  catch (error){
+    console.log(error)
+    return null
+  }
 };
+
 
 export const getPostById = id => {
   return posts.find(post => Number(post.id) === Number(id));

@@ -4,8 +4,8 @@ import { Blog } from '../components/blog/blog';
 import { Pagination } from '../components/pagination';
 import { Layout } from '../layout/Layout';
 
-export const BlogPostsPage = () => {
-  const posts = getPosts();
+export const BlogPostsPage = async () => {
+  const posts = await getPosts();
 
   return Layout(`
     <section class="posts">

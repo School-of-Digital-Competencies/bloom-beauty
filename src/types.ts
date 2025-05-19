@@ -22,3 +22,11 @@ export interface ProductsResponse {
 export interface RatingStar {
   fill: string;
 }
+
+export interface Post {
+  id: number;
+  title: string;
+  body: string;
+  data: string;
+  tags: string[];
+}
