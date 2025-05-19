@@ -9,12 +9,12 @@ export const CatalogPage = async () => {
 
   const products = await getProducts();
   
-
   return Layout(`
       
     <section class="products">
-     ${filterElement()}
-
+      
+    ${filterElement()}
+      
     ${ProductGrid(products)}
      
     </section>
