@@ -1,5 +1,5 @@
 import { getPosts } from '../api/posts';
-import { PostComponent } from '../components/post/post';
+import { PostComponent } from '../components/post/post.ts';
 import { Blog } from '../components/blog/blog';
 import { Pagination } from '../components/pagination';
 import { Layout } from '../layout/Layout';
