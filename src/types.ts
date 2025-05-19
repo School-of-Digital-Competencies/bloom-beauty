@@ -10,6 +10,7 @@ export interface Product {
   category: string;
   thumbnail: string;
   images: string[];
+  tags: string[];
 }
 
 export interface ProductsResponse {
