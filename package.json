@@ -2,11 +2,12 @@
   "name": "bloom-beauty",
   "version": "1.0.0",
   "description": "Bloom Beauty E-Commerce project",
-  "main": "main.js",
+  "type": "module",
   "scripts": {
     "dev": "vite",
-    "build": "vite build",
-    "preview": "vite preview"
+    "build": "tsc && vite build",
+    "preview": "vite preview",
+    "type-check": "tsc --noEmit"
   },
   "repository": {
     "type": "git",
@@ -22,6 +23,8 @@
     "yourrouter": "^1.1.0"
   },
   "devDependencies": {
-    "vite": "^5.1.4"
+    "vite": "^5.1.4",
+    "typescript": "^5.0.0",
+    "@types/node": "^20.0.0"
   }
 }

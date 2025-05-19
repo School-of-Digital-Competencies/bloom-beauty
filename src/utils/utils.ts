@@ -1,25 +1,23 @@
-import {Blossomed} from "../components/blossomed/blossomed";
-
-export function getProductImageUrl(img) {
+export function getProductImageUrl(img: string): string {
   return new URL(`/src/assets/images/products/${img}`, import.meta.url).href;
 }
 
-export function getPostImageUrl(img) {
+export function getPostImageUrl(img: string): string {
   return new URL(`/src/assets/images/posts/${img}`, import.meta.url).href;
 }
 
-export function getIconUrl(icon) {
+export function getIconUrl(icon: string): string {
   return new URL(`/src/assets/icons/${icon}`, import.meta.url).href;
 }
 
-export function getQuizImageUrl(img) {
+export function getQuizImageUrl(img: string): string {
   return new URL(`/src/assets/images/quiz/${img}`, import.meta.url).href;
 }
 
-export function getBlossomedImageUrl(img) {
+export function getBlossomedImageUrl(img: string): string {
   return new URL(`/src/assets/images/blossomed/${img}`, import.meta.url).href;
 }
 
-export function getCardImageUrl(img) {
+export function getCardImageUrl(img: string): string {
   return new URL(`/src/assets/images/cards/${img}`, import.meta.url).href;
-}
+} 

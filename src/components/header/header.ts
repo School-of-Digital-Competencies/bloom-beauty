@@ -1,10 +1,11 @@
 import './header.css';
 import { getIconUrl } from '../../utils/utils';
 
-const CART_ICON_URL = getIconUrl('cart-icon.svg');
-const SEARCH_ICON_URL = getIconUrl('circle-arrow-icon-02.svg');
-const ACCOUNT_ICON_URL = getIconUrl('account-icon.svg');
-const TEMPLATE = `
+const CART_ICON_URL: string = getIconUrl('cart-icon.svg');
+const SEARCH_ICON_URL: string = getIconUrl('circle-arrow-icon-02.svg');
+const ACCOUNT_ICON_URL: string = getIconUrl('account-icon.svg');
+
+const TEMPLATE: string = `
     <div class="icon-conteiner desktop-hidden" id="menu">
       <div class="icon">
         <div class="burger-menu">
@@ -64,19 +65,18 @@ const TEMPLATE = `
           <li>ABOUT US</li>
         </ul>
     </div>
-  `;
+`;
 
-export function onMenuBurgerClicked() {
-  const headerElement = document.getElementsByTagName('header')[0];
-  headerElement.classList.toggle('opened');
+export function onMenuBurgerClicked(): void {
+  const headerElement: HTMLElement | null = document.getElementsByTagName('header')[0];
+  if (headerElement) {
+    headerElement.classList.toggle('opened');
+  }
 }
 
-export const Header = () => {
-
-  const headerElement = document.createElement('header');
-
+export const Header = (): HTMLElement => {
+  const headerElement: HTMLElement = document.createElement('header');
   headerElement.classList.add('header');
   headerElement.innerHTML = TEMPLATE;
-
   return headerElement;
-};
+}; 
