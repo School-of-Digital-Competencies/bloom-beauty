@@ -7,7 +7,7 @@ import { Share } from '../components/share/share';
 import { Cards } from '../components/cards/cards';
 import { ProductCardLarge } from '@/components/product-card-large/product-card-large';
 
-export const HomePage = async () => {
+export const HomePage = async ():Promise<string> => {
   const products = await getProducts({ skip: 0, limit: 2 });
   const newArrivals = await getProducts({
     skip: 0,
