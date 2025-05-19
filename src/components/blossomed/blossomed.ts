@@ -7,7 +7,11 @@ export const Blossomed = (blossomed: { [key: string]: string }) => {
 
   return `
     <div class="blossomed-item">
-        <img class="blossomed__image" src="${imgUrl}" />
+        <img class="blossomed-item__image" src="${imgUrl}" />
+        <div class="blossomed-item__buttons">
+          <a href="#" class="blossomed-item__button-instagram">test</a>
+          <a href="#" class="blossomed-item__button-buy">test</a>
+        </div>
     </div>
     `;
 };
