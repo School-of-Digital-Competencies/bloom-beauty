@@ -1,9 +1,9 @@
 import './blossomed.css';
 import { getBlossomedImageUrl } from '../../utils/utils';
 
-export const Blossomed = (blossomed) => {
+export const Blossomed = (blossomed: { [key: string]: string }) => {
   const { img } = blossomed;
-  const imgUrl = getBlossomedImageUrl(img);
+  const imgUrl: string = getBlossomedImageUrl(img);
 
   return `
     <div class="blossomed-item">
