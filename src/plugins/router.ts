@@ -1,7 +1,7 @@
 import Router from 'yourrouter';
 import { renderInHtml } from '../utils/renderInHtml';
 import { HomePage } from '../pages/HomePage.ts';
-import { CatalogPage } from '../pages/CatalogPage';
+import { CatalogPage } from '../pages/CatalogPage.ts';
 import { ProductPage } from '../pages/ProductPage';
 import { BlogPostsPage } from '../pages/BlogPostsPage';
 
