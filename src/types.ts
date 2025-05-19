@@ -27,6 +27,6 @@ export interface IPost{
   title:string;
   description:string,
   img:string,
-  tags:[],
+  tags:string[],
   createdDate: Date
 }
