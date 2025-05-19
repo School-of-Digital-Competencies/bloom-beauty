@@ -9,7 +9,8 @@
   flex-direction: column;
 }
 
-.card-item, .card-content {
+.card-item,
+.card-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -43,7 +44,7 @@
 }
 
 .cards__title::before {
-  content: "";
+  content: '';
   display: inline-block;
   width: 50px;
   height: 13px;
@@ -54,7 +55,7 @@
 }
 
 .cards__title::after {
-  content: "";
+  content: '';
   display: inline-block;
   width: 50px;
   height: 13px;
@@ -63,8 +64,6 @@
   background-repeat: no-repeat;
   margin-left: 10px;
 }
-
-
 
 .cards__link {
   font-family: Poppins sans-serif;
@@ -75,17 +74,18 @@
   margin-bottom: 30px;
 }
 
-.card-image img{
+.card-image img {
   width: 289px;
   height: 289px;
   margin-bottom: 30px;
 }
 
 .stars svg {
-    fill: #DFE1E3;
+  fill: #dfe1e3;
 }
 
-.span-text, .card__grey-text {
+.span-text,
+.card__grey-text {
   font-family: 'Montserrat', sans-serif;
   font-weight: 400;
   font-size: 14px;
@@ -105,9 +105,7 @@
   font-size: 16px;
   line-height: 24px;
   margin-bottom: 15px;
-
 }
-
 
 .btn-card {
   font-family: Poppins sans-serif;
@@ -115,16 +113,20 @@
   font-size: 14px;
   line-height: 21px;
   color: #383838;
-  background-color: #FFFFFF;
+  background-color: #ffffff;
   padding: 10px 84px;
   border-radius: 4px;
   border: 1px solid #252525;
 }
 
+.btn-card:hover {
+  background-color: #252525;
+  color: #ffffff;
+}
+
 .card-content {
   text-align: left;
 }
-
 
 .arrow {
   width: 40px;
@@ -140,14 +142,12 @@
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%)
-
+  transform: translate(-50%, -50%);
 }
 
 .arrow-left {
   left: 20px;
 }
-
 
 .arrow-right {
   left: -40px;
