@@ -1,4 +1,4 @@
-import './header.css';
+  import './header.css';
 import { getIconUrl } from '../../utils/utils';
 
 const CART_ICON_URL: string = getIconUrl('cart-icon.svg');
@@ -58,7 +58,7 @@ const TEMPLATE: string = `
         </div>
         <ul class="menu-list_body">
           <li><a href="#/catalog">CATALOG</a></li>
-          <li><a href="#/posts">BLOG</a></li>
+          <li><a href="#/blogposts">BLOG</a></li>
           <li>SHOP ALL </li>
           <li>BESTSELLERS</li>
           <li>COLLECTION</li>
