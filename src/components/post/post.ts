@@ -1,8 +1,8 @@
 import './post.css';
 import { getPostImageUrl } from '@/utils/utils.ts';
-import { IPost } from "@/types.ts"
+import { Post } from "@/types.ts"
 
-export const Post = (post:IPost, index:number) => {
+export const PostComponent = (post:Post, index:number) => {
   const {  title, description, img, tags, createdDate } = post;
   const imageURL = getPostImageUrl(img);
   const Tag = (tag:string) => {

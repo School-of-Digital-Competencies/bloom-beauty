@@ -23,7 +23,7 @@ export interface RatingStar {
   fill: string;
 }
 
-export interface IPost{
+export interface Post{
   title:string;
   description:string,
   img:string,
